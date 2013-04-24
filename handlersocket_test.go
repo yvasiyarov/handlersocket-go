@@ -22,7 +22,18 @@ CREATE  TABLE `gotest`.`kvs` (
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB;
 
+CREATE  TABLE `gotest`.`users` (
+  `user_id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
+  `name` VARCHAR(45) NOT NULL ,
+  `age` INT NOT NULL ,
+  PRIMARY KEY (`user_id`) ,
+  INDEX `k1` (`age` ASC) )
+ENGINE = InnoDB;
 
+INSERT INTO `gotest`.`users` ( `name`, `age`) VALUES ('John', 20);
+INSERT INTO `gotest`.`users` ( `name`, `age`) VALUES ( 'Mark', 25);
+INSERT INTO `gotest`.`users` ( `name`, `age`) VALUES ( 'Alex', 30);
+INSERT INTO `gotest`.`users` (`name`, `age`) VALUES ('Stiv', 35);
 */
 
 package handlersocket
